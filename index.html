@@ -563,6 +563,7 @@ function renderGallery(){
   currentList = currentFilter
     ? MEDIA.filter(m => m.location === currentFilter)
     : MEDIA.slice();
+shuffle(currentList);
 
   els.gallery.innerHTML = "";
   currentList.forEach((m, i) => {
